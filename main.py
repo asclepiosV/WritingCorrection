@@ -1,15 +1,8 @@
-
 print("Enter the text to correct")
-
 text = input().split()
-
 with open('word.txt') as f:
     wordlist = f.read().splitlines()
-
 i = 0
-
-
-
 
 
 def exist(word):
@@ -44,17 +37,15 @@ def correction(word):
             k += 1
         j += 1
         k = 0
-
     if check == 0 and count == 0:
         word = 'undefined'
         prop.append(word)
     return prop
 
 
-
 while i < len(text):
     check = exist(text[i])
-    if check == 1 :
+    if check == 1:
         print("\"" + text[i] + "\"" + " is correct")
     else:
         print("\"" + text[i] + "\"" + " is incorrect\n")
@@ -63,5 +54,4 @@ while i < len(text):
         print("You can use ")
         print(prop)
         print("instead of \"" + text[i] + "\"\n")
-    i+=1
-
+    i += 1
